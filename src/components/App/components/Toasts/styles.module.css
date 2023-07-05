@@ -1,0 +1,82 @@
+.wrapper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    display: flex;
+    z-index: 101;
+
+.toasts {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+&.mobile {
+     bottom: 64px;
+     padding: var(--p-d);
+ }
+
+&.small {
+     top: 48px;
+     left: 0;
+     right: 0;
+     width: 100%;
+     padding: var(--p-d);
+
+.toast {
+    width: 100%;
+    animation: slide-from-top-left 300ms ease;
+}
+}
+
+.toast {
+    animation: slide-from-bottom-left 300ms ease;
+    display: flex;
+    padding: 16px;
+    background: #424242;
+    color: #fff;
+    font-size: 16px;
+    pointer-events: all;
+    border-radius: 8px;
+    box-shadow: 0 1px 6px 1px #d4d4d4;
+    width: 450px;
+
+&.error {
+     background: #ff3345;
+ }
+
+&.success {
+     background: #40dc86;
+ }
+}
+}
+}
+
+@keyframes slide-from-bottom-left {
+    0% {
+        opacity: 0.5;
+        transform: translate(-100%, 100%) scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+@keyframes slide-from-top-left {
+    0% {
+        opacity: 0.5;
+        transform: translate(-100%, -100%) scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+}

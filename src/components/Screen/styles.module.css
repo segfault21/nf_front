@@ -1,0 +1,30 @@
+.screenWrapper {
+    padding: var(--p-d);
+    width: calc(100% - 84px - 390px);
+    height: 100%;
+    position: absolute;
+    left: calc(84px + 390px);
+    top: 0;
+
+    &.mobile,
+    &.small {
+         @apply mobileScreenWrapper;
+     }
+
+    &.laptop {
+         @apply laptopScreenWrapper;
+     }
+    }
+
+.screen {
+    background: #fff;
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid rgba(151, 151, 151, 0.2);
+    overflow-y: auto;
+    @apply cool;
+}

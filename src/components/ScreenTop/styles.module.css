@@ -1,0 +1,25 @@
+.wrapper {
+    position: absolute;
+    top: 0;
+    height: 48px;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+
+    .bars {
+        display: flex;
+        position: absolute;
+        left: 12px;
+
+        svg {
+            height: 28px;
+            fill: rgba(100, 116, 139, 1);
+        }
+    }
+
+    .name {
+        @apply font-medium text-blue-gray-500;
+    }
+}

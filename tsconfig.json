@@ -1,11 +1,9 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -18,9 +16,16 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": "./src",
+    "strictPropertyInitialization": false,
+    "paths": {
+      "~/*": ["./*"],
+      "components/*": ["./components/*"],
+      "~/components/*": ["./components/*"],
+      "~/assets/*": ["./assets/*"]
+    },
+    "useDefineForClassFields": true
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src", "./src/react-app-env.d.ts"]
 }

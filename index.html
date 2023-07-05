@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--suppress HtmlUnknownTarget -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="/logo192.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <title>NIKIFILINI</title>
+  </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <div id="modals" class="topPortal"></div>
+    <div id="menus" class="topPortal"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+
+  <script>
+    window.enableTSDMode = () => {
+      localStorage.setItem('tsdMode', true)
+    }
+  </script>
+
+  <style>
+    .topPortal {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+    }
+
+    .topPortal > * {
+      pointer-events: all;
+      position: absolute;
+    }
+
+    #modals {
+      z-index: 10000;
+    }
+
+    #menus {
+      z-index: 10001;
+    }
+
+    #root {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+  </style>
+</html>
