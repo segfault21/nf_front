@@ -20,9 +20,6 @@
     }
   }
 }
-
-
-
 .screenScroll{
   background: #fff;
   width: 100%;
@@ -35,44 +32,13 @@
     width: 50%;
     height: 100%;
 
-    .head {
-      display: grid;
-      grid-template-columns: 6fr 3fr;
-      background: rgba(245, 245, 250, 0.4);
-      padding: 0 16px;
-      min-height: 48px;
-      font-weight: 500;
-      font-size: 14px;
-      color: #8181a5;
-      align-items: center;
-      border-bottom: 1px solid rgba(151, 151, 151, 0.2);
-
-      .name {
-        user-select: none;
-        cursor: pointer;
-      }
-
-      .article {
-        user-select: none;
-        text-align: center;
-        cursor: pointer;
-      }
-
-      .value {
-        user-select: none;
-        text-align: center;
-        cursor: pointer;
-      }
-    }
-
     .itemsWrapper {
       height: 100%;
       overflow: hidden;
       @apply cool;
 
       .items {
-        display: grid;
-        grid-template-columns: 6fr 3fr;
+        display: table;
 
         .row {
           display: contents;

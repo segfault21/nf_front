@@ -5,19 +5,18 @@ declare const styles: {
   small: string;
   laptop: string;
   screen: string;
-  head: string;
   itemsWrapper: string;
   bottom: string;
-  name: string;
-  article: string;
-  value: string;
   items: string;
   info: string;
   separator: string;
   total: string;
   row: string;
   property: string;
+  head: string;
+  value: string;
   productName: string;
+  article: string;
 };
 
 export default styles;
