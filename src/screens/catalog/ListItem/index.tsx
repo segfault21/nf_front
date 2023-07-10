@@ -1,4 +1,3 @@
-import { ScreenContext } from '..'
 import { observer } from 'mobx-react-lite'
 import React from 'react'
 import AspectRatio from '@mui/joy/AspectRatio';
@@ -16,7 +15,7 @@ interface Props {
     item: Product
 }
 
-const ListItem = observer(({ item, price }: Props) => {
+const ListItem = observer(({ item }: Props) => {
   return (
       <Card variant="outlined" sx={{ width: 320 }}>
           <div>
@@ -45,7 +44,7 @@ const ListItem = observer(({ item, price }: Props) => {
               <div>
                   <Typography level="body3">Цена:</Typography>
                   <Typography fontSize="lg" fontWeight="lg">
-                      {item.prices.find((p) => p.priceTypeId === '1b415b22-7c96-4bfb-be3b-aad7fb0f874e')?.value?? null}₽
+                      {item.prices.map((p) => p.value)?? null}₽
                   </Typography>
               </div>
               <Button

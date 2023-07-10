@@ -1,6 +1,6 @@
 import { MobxStore, observableStore } from '../useMobx'
-import {Product, ProductPrice} from "~/api/catalog/products";
 import catalogApi, {AssortmentMinimalInfo} from "../../api/catalog";
+import {Product} from "~/api/catalog/products";
 
 @observableStore
 export class CatalogStore extends MobxStore {
